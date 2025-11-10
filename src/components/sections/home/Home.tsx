@@ -100,8 +100,8 @@ const Home = () => {
                         src={personImg}
                         alt="Saleh Fares"
                         className="max-h-[60vh] md:max-h-[90%] object-contain"
-                        data-aos="fade-left"
-                        data-aos-duration="2000"
+                        // data-aos="fade-left"
+                        // data-aos-duration="2000"
                     />
                 </div>
                 <div className="w-full md:w-1/12 h-1/2 md:h-screen hidden md:flex items-center justify-center mt-10 md:mt-0  ">
