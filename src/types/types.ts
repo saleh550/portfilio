@@ -7,4 +7,5 @@ export type ProjectType = {
     laptopImg: string;
     desktopImg: string;
     createdAt: string;
+    link?: string;
 }

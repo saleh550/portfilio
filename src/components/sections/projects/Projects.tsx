@@ -1,10 +1,6 @@
 
-import desktopImg from "../../../assets/images/devices/tv.png";
-import desktop2Img from "../../../assets/images/devices/tv2.png";
-import laptopImg from "../../../assets/images/devices/laptop.png";
-import tabletImg from "../../../assets/images/devices/tablet.png";
+
 // import mobile2Img from "../../../assets/images/devices/mobile2.png";
-import mobileImg from "../../../assets/images/devices/mobile1.png";
 
 import agrismartdesktopImg from "../../../assets/images/agrismart-images/desktop.png";
 import agrismartlaptopImg from "../../../assets/images/agrismart-images/laptop.png";
@@ -15,6 +11,9 @@ import miragedatedesktopImg from "../../../assets/images/mirage-date/desktop.png
 import miragedatelaptopImg from "../../../assets/images/mirage-date/laptop.png";
 import miragedatetabletImg from "../../../assets/images/mirage-date/teblet.png";
 import miragedatemobileImg from "../../../assets/images/mirage-date/mobile.png";
+
+import labalconedesktopImg from "../../../assets/images/la-balcone/desktop.png";
+import labalconemobileImg from "../../../assets/images//la-balcone/mobile.png";
 
 import bgImage from "../../../assets/images/projectbg.webp"
 import DevicesMakeUp from "./DevicesMakeUp";
@@ -27,50 +26,55 @@ const Projects = () => {
 
     const projects = [
         {
-            name: "Digital Menu System",
-            desc: "An advanced restaurant menu platform allowing customers to scan, view, and order directly from their mobile phones.",
-            image: bgImage,
-            tabletImg: tabletImg,
-            mobileImg: mobileImg,
-            laptopImg: laptopImg,
-            desktopImg: desktop2Img,
-            createdAt: "June 2024",
-        },
-        {
-            name: "Travel Agent Portal",
-            desc: "Web-based management system for agents to track deals, bookings, and customer inquiries efficiently.",
+            name: "🌱 AgriSmart - Intelligent Agriculture Management System",
+            desc: `AgriSmart is a comprehensive agricultural management platform built to help farmers, plantation owners, and agricultural companies monitor and improve the health of their crops.
+The system uses advanced data-driven techniques and integrates powerful APIs such as Google Earth Engine, Sentinel Hub, and other geospatial tools to analyze plantations at scale.
+Users can track plant health, detect issues early, and receive actionable insights to optimize irrigation, fertilization, and harvesting.
+The platform simplifies complex agricultural data into visual dashboards and reports, helping customers maintain healthier plantations and increase productivity with confidence.`,
             image: bgImage,
             tabletImg: agrismarttabletImg,
             mobileImg: agrismartmobileImg,
             laptopImg: agrismartlaptopImg,
             desktopImg: agrismartdesktopImg,
             createdAt: "March 2024",
+            link:"https://grow-tech.digital/dashboard"
         },
         {
-            name: "Barbershop Queue App",
-            desc: "Queue management and booking system designed for small businesses to organize appointments in real time.",
+            name: "🏡 MirageDate - Home & Wedding Expense Management Platform",
+            desc: `MirageDate is a beautifully designed, user-friendly platform that helps individuals and families manage all financial and logistical aspects of building a new home or planning a wedding.
+The system includes smart expense tracking, detailed cost categories, and a fully integrated calendar-based task scheduling tool to keep everything organized.
+Users can manage guest lists, stay on top of deadlines, and upload images efficiently using AWS S3 for secure media storage.
+With its clean UI/UX and intuitive flow, MirageDate turns stressful planning processes into a smooth and enjoyable experience.`,
             image: bgImage,
             desktopImg: miragedatedesktopImg,
             laptopImg: miragedatelaptopImg,
             tabletImg: miragedatetabletImg,
             mobileImg: miragedatemobileImg,
-            createdAt: "January 2025",
+            createdAt: "January 2024",
+            link:"https://mariage-date-alpha.vercel.app/login"
         },
         {
-            name: "Home Expense Tracker",
-            desc: "Comprehensive platform for managing wedding and home-building expenses with cloud sync and reports.",
+            name: "🍽️ La-Balcone Restaurant - Digital Menu & Admin Management System",
+            desc: `La-Balcone is a modern digital restaurant menu designed for clarity, simplicity, and an excellent dining experience.
+The system includes an admin dashboard where restaurant owners can easily add, edit, or delete menu items, manage categories, and keep content updated in real time.
+The customer-facing menu is designed with a clean and friendly UI, making it easy to browse dishes, view details, and explore categories effortlessly.
+La-Balcone helps restaurants present a professional digital experience while simplifying menu management.`,
             image: bgImage,
-            tabletImg: tabletImg,
-            mobileImg: mobileImg,
-            laptopImg: laptopImg,
-            desktopImg: desktop2Img,
-            createdAt: "August 2024",
+            tabletImg: labalconedesktopImg,
+            mobileImg: labalconemobileImg,
+            laptopImg: labalconedesktopImg,
+            desktopImg: labalconedesktopImg,
+            createdAt: "August 2025",
+            link: "https://la-balcone.com/"
         },
     ];
 
     return (
         <section id="projects" className="bg-gray-50 py-20 px-6 md:px-20">
             <div className="max-w-6xl mx-auto text-center mb-16">
+                <span className="text-blue-600 uppercase tracking-widest font-semibold">
+                    Projects
+                </span>
                 <h2
                     className="text-4xl font-bold text-gray-900 mb-4"
                     data-aos="fade-up"
