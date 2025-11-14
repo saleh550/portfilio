@@ -1,13 +1,13 @@
 import React, { type ReactNode } from "react";
-import Navbar from "../header/Navbar";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Home from "./home/Home";
 import About from "./about/About";
 import Services from "./services/Services";
 import Projects from "./projects/Projects";
+import ContactMe from "./cantactme/ContactMe";
 
-const Section = ({ id, bg, color, title,children }: { id: string; bg?: string; color: string; title: string,children?:ReactNode }) => {
+const Section = ({ id, bg, color,children }: { id: string; bg?: string; color: string; title: string,children?:ReactNode }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.3 });
 
@@ -39,6 +39,7 @@ const Sections = () => {
       <Section id="about" bg="bg-gray-100" color="text-gray-900" title="About" children={<About/>} />
       <Section id="services" bg="bg-red-100" color="text-gray-900" title="Services" children={<Services/>} />
       <Section id="projects" bg="b" color="text-white" title="Projects" children={<Projects/>}/>
+      <Section id="contact" bg="b" color="text-white" title="Contact me" children={<ContactMe/>}/>
     </div>
   );
 };

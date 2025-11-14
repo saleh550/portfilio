@@ -2,6 +2,11 @@
 html {
   scroll-behavior: smooth;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+.magic-font {
+  font-family: 'Cinzel Decorative', serif;
+}
 @keyframes floating {
   0%, 100% {
     transform: translateX(0) translateY(0);

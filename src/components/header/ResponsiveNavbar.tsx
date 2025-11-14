@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import image from '../../assets/images/041A1035.png'
+import logo from '../../../public/piqtek.svg'
 import file from "../../../public/files/file.pdf"
 const navigation = [
     { name: 'Home', href: '#home' },
@@ -14,35 +15,35 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
     const [isNavDisplay, setIsNavDisplay] = useState(false);
-useEffect(() => {
-  let timer: ReturnType<typeof setTimeout>;
+    useEffect(() => {
+        let timer: ReturnType<typeof setTimeout>;
 
-  const showNavTemporarily = (duration = 4000) => {
-    setIsNavDisplay(true);
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      setIsNavDisplay(false);
-    }, duration);
-  };
+        const showNavTemporarily = (duration = 4000) => {
+            setIsNavDisplay(true);
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                setIsNavDisplay(false);
+            }, duration);
+        };
 
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 20);
-    showNavTemporarily(1000); // show for 1 second on scroll
-  };
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+            showNavTemporarily(1000); // show for 1 second on scroll
+        };
 
-  const handleMouseMove = () => {
-    showNavTemporarily(4000); // show for 4 seconds on mouse move
-  };
+        const handleMouseMove = () => {
+            showNavTemporarily(4000); // show for 4 seconds on mouse move
+        };
 
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("mousemove", handleMouseMove);
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("mousemove", handleMouseMove);
-    clearTimeout(timer);
-  };
-}, []);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("mousemove", handleMouseMove);
+            clearTimeout(timer);
+        };
+    }, []);
 
     const handleDownload = () => {
         const link = document.createElement("a");
@@ -55,7 +56,7 @@ useEffect(() => {
     };
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? (isNavDisplay?'bg-black/50 backdrop-blur-sm shadow-md':'hiiden opacity-0 pointer-events-none') : 'bg-transparent'
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? (isNavDisplay ? 'bg-black/50 backdrop-blur-sm shadow-md' : 'hiiden opacity-0 pointer-events-none') : 'bg-transparent'
                 }`}
         >
             <nav
@@ -63,11 +64,13 @@ useEffect(() => {
                 aria-label="Global"
             >
                 {/* Logo */}
-                <div className="flex lg:flex-1">
+                <div className="flex lg:flex-1 items-center
+                ">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <img className="h-8 w-auto" src={image} alt="Logo" />
+                        <img className="h-12 w-auto" src={logo} alt="Logo" />
                     </a>
+                    <p className='text-white magic-font'>PIQTEK</p>
                 </div>
 
                 {/* Desktop Navigation */}
